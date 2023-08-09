@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors!</title>
     <link rel="stylesheet" href="styles.css"/>
+    
 </head>
 <body>
     <main class="main" id="main">
@@ -12,11 +13,13 @@
         <button class="btn-play" id="playEl">Play</button>
         
         <ul class="btn-items">
-            <li><img src="img/rock.png" alt="rock stones transparent background" draggable="false"/><br><br><button>Rock</button></li>
-            <li><img src="img/paper.png" alt="paper transparent background" draggable="false"/><br><br><button>Paper</button></li>
-            <li><img src="img/scissors.png" alt="rock stones transparent background" draggable="false"/><br><br><button>Scissors</button></li>
+            <li><img src="img/rock.png" alt="rock stones transparent background" draggable="false"/><br><br><button id="rock" value="rock">Rock</button></li>
+            <li><img src="img/paper.png" alt="paper transparent background" draggable="false"/><br><br><button id="paper">Paper</button></li>
+            <li><img src="img/scissors.png" alt="rock stones transparent background" draggable="false"/><br><br><button id="scissors">Scissors</button></li>
         </ul>
     </main>
+    <h2 id="message"></h2>
+    <script src="app.js"></script>
 </body>
 
 </html>
