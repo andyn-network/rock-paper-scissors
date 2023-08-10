@@ -1,36 +1,41 @@
-const rockEl = document.getElementById("rock");
-const paperEl = document.getElementById("paper");
-const scissorsEl = document.getElementById("scissors");
-const message = document.getElementById("message");
-const rock = rockEl.value;
-const paper = paperEl.value;
-const scissors = scissorsEl.value;
+const choices = ["rock", "paper", "scissors"];
+const resultEl = document.getElementById("result");
+const messageEl = document.getElementById("message");
 
+function computerPlay() {
+    return choices[Math.floor(Math.random() * choices.length)];
+}
 
-
-const items = [rock, paper, scissors];
-const player = items[Math.floor(Math.random() * items.length)];
-const playerAi = items[Math.floor(Math.random() * items.length)];
-
-rockEl.addEventListener("click", playGame);
-paperEl.addEventListener("click", playGame);
-scissorsEl.addEventListener("click", playGame);
-
-function playGame() {
-    if(player === playerAi) {
-        console.log("Player: " + player);
-        console.log("Opponent: "+ playerAi);
-        message.textContent = "Draw";
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        resultEl.textContent = "Draw";
+        messageEl.textContent = "It's a tie!";
     } 
     else if (
-        player === rock && playerAi === scissors || player === paper && playerAi === rock || player === scissors && playerAi === paper) {
-        console.log("Player: " + player);
-        console.log("Opponent: "+ playerAi);
-        message.textContent = "You Win";
+        (playerChoice === "rock" && computerChoice === "scissors") || 
+        (playerChoice === "paper" && computerChoice === "rock") || 
+        (playerChoice === "scissors" && computerChoice === "paper")
+     ) {
+        resultEl.textContent = "You Win!";
+        messageEl.textContent = "Player's " + (playerChoice).toUpperCase() + " beats " + (computerChoice).toUpperCase();
     } 
     else {
-        console.log("Player: " + player);
-        console.log("Opponent: "+ playerAi);
-        message.textContent = "You Win";
+        console.log("Player: " + playerChoice);
+        console.log("Opponent: " + computerChoice);
+        resultEl.textContent = "You Lose!";
+        messageEl.textContent = "Computer's " + (computerChoice).toUpperCase() + " beats " + (playerChoice).toUpperCase();
     }
 }
+
+function game(playerChoice) {
+    const computerChoice = computerPlay();
+    playRound(playerChoice, computerChoice);
+}
+
+const choiceButtons = document.querySelectorAll(".choice");
+choiceButtons.forEach((button) => {
+    button.addEventListener("click", function() {
+        const playerChoice = button.id;
+        game(playerChoice);
+    });
+});

@@ -10,16 +10,15 @@
 <body>
     <main class="main" id="main">
         <h1 class="title" id="title">Rock, Paper, Scissors!</h1>
-        <button class="btn-play" id="playEl">Play</button>
-        
         <ul class="btn-items">
-            <li><img src="img/rock.png" alt="rock stones transparent background" draggable="false"/><br><br><button id="rock" value="rock">Rock</button></li>
-            <li><img src="img/paper.png" alt="paper transparent background" draggable="false"/><br><br><button id="paper">Paper</button></li>
-            <li><img src="img/scissors.png" alt="rock stones transparent background" draggable="false"/><br><br><button id="scissors">Scissors</button></li>
+            <li><img src="img/rock.png" alt="rock stones transparent background" draggable="false"/><br><br><button class="choice" id="rock">Rock</button></li>
+            <li><img src="img/paper.png" alt="paper transparent background" draggable="false"/><br><br><button class="choice" id="paper">Paper</button></li>
+            <li><img src="img/scissors.png" alt="rock stones transparent background" draggable="false"/><br><br><button class="choice" id="scissors">Scissors</button></li>
         </ul>
+        <h2 class="results" id="result"></h2>
+        <h2 class="results" id="message"></h2>
+        <script src="app.js"></script>
     </main>
-    <h2 id="message"></h2>
-    <script src="app.js"></script>
 </body>
 
 </html>

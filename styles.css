@@ -6,22 +6,34 @@
 
 body {
     background-image: url('img/grass-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #ffffff;
+    background-color: lightblue;
+
     height: 100vh;
     font-size: 62.5%;
     font-family: sans-serif;
 }
 
 .main {
-    /* border: 2px solid red; */
-    margin: 5rem auto;
+    background-image: url('img/grass-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: 10px solid white;
+    margin: 4rem auto;
     padding: 2rem;
     max-width: 1000px;
     text-align: center;
     font-size: 1.2rem;
     overflow: auto;
+}
+
+.results {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem auto;
+    font-size: 2rem;
 }
 
 img {
