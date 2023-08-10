@@ -15,8 +15,18 @@
             <li><img src="img/paper.png" alt="paper transparent background" draggable="false"/><br><br><button class="choice" id="paper">Paper</button></li>
             <li><img src="img/scissors.png" alt="rock stones transparent background" draggable="false"/><br><br><button class="choice" id="scissors">Scissors</button></li>
         </ul>
-        <h2 class="results" id="result"></h2>
-        <h2 class="results" id="message"></h2>
+        <div class="flex-wrapper">
+            <div class="leaderboard">
+                <h3 id="win">Wins: 0</h3>
+                <h3 id="lose">Losses: 0</h3>
+                <h3 id="draw">Draws: 0</h3>
+                <button class="btn-newgame" id="newGame">New Game</button>
+            </div>
+            <div class="results-wrapper">
+                <h2 class="results" id="result">Rules are simple.</h2>
+                <h2 class="results" id="message">Try to beat the computer!</h2>
+            </div>
+        </div>
         <script src="app.js"></script>
     </main>
 </body>

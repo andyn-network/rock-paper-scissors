@@ -1,6 +1,7 @@
 const choices = ["rock", "paper", "scissors"];
 const resultEl = document.getElementById("result");
 const messageEl = document.getElementById("message");
+const newGameEl = document.getElementById("newGame");
 
 function computerPlay() {
     return choices[Math.floor(Math.random() * choices.length)];
@@ -9,7 +10,7 @@ function computerPlay() {
 function playRound(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         resultEl.textContent = "Draw";
-        messageEl.textContent = "It's a tie!";
+        messageEl.textContent = "It's a TIE!";
     } 
     else if (
         (playerChoice === "rock" && computerChoice === "scissors") || 
@@ -39,3 +40,7 @@ choiceButtons.forEach((button) => {
         game(playerChoice);
     });
 });
+
+newGameEl.addEventListener("click", function newGame() {
+    window.location.reload();
+})
