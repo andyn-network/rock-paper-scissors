@@ -30,6 +30,8 @@ body {
 
 .title {
     /* border: 2px solid white; */
+    display: flex;
+    flex-wrap: wrap;
     background-color: rgba(20,0,0,0.5);
     border-radius: 20px 20px;
     color: white;
