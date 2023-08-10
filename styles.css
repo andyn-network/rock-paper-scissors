@@ -7,7 +7,8 @@
 body {
     background-image: url('img/grass-bg.jpg');
     background-color: lightblue;
-
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     font-size: 62.5%;
     font-family: sans-serif;
